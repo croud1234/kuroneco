@@ -52,11 +52,22 @@
 
 			<div class="row-fluid">
 				<figure>
+                    <div id="info">original</div>
 					<span id="img"></span>
+                    <div id="info">grayscale</div>
 					<canvas id="grayscale" width="600" height="337" style="display: none; "></canvas>
+                    <div id="info">brightness</div>
 					<canvas id="brightness" width="600" height="337" style="display: none; "></canvas>
+                    <div id="info">threshold</div>
 					<canvas id="threshold" width="600" height="337" style="display: none; "></canvas>
-					<button onclick="grayscale()">Grayscale the image</button>
+                    <div id="info">sharpen</div>
+					<canvas id="sharpen" width="600" height="337" style="display: none; "></canvas>
+                    <div id="info">blur</div>
+					<canvas id="blur" width="600" height="337" style="display: none; "></canvas>
+                    <div id="info">sobel</div>
+					<canvas id="sobel" width="600" height="337" style="display: none; "></canvas>
+					<button onclick="execute()">Filtering the image</button>
+
 				</figure>
 			</div>
 		</div>
