@@ -1,5 +1,5 @@
 //フィルタリングを行うだけのスクリプト
-Filters = {};
+Filters = { };
 
 Filters.getPixels = function(img) {
     //ブラウザでcanvasが使えるかを判定
@@ -8,13 +8,13 @@ Filters.getPixels = function(img) {
 		c = img;
 		try { ctx = c.getContext('2d'); } catch(e) {}
 	}
-    //canvasが使える場合は画像を取得し、表示
 	if (!ctx) {
 		c = this.getCanvas(img.width, img.height);
 		ctx = c.getContext('2d');
 		ctx.drawImage(img, 0, 0);
 	}
     //画像イメージを返す
+
 	return ctx.getImageData(0,0,c.width,c.height);
 };
 
@@ -163,4 +163,65 @@ Filters.convoluteFloat32 = function(pixels, weights, opaque) {
 }; 
 
 
- 
+Filters.reverse = function(pixels) {
+
+   for(var i=0, j=pixels.data.length; i < j; i++){
+      if(i % 4 !== 3) {
+         pixels.data[i] = 255 - pixels.data[i];
+      }
+   }
+
+   return pixels;
+
+};
+
+
+Filters.boostred = function(pixels) {
+   for(var i = 0, j = pixels.data.length; i < j; i ++) {
+      switch(i % 4) {
+         case 0:
+            pixels.data[i] = Math.round(Math.min(255, pixels.data[i] * 1.2));
+            break;
+         case 1: case 2:
+            pixels.data[i] = Math.floor(pixels.data[i] / 2);
+            break;
+         case 3:break;
+      }
+   }
+
+   return pixels;
+}
+
+Filters.boostgreen = function(pixels) {
+   for(var i = 0, j = pixels.data.length; i < j; i ++) {
+      switch(i % 4) {
+         case 1:
+            pixels.data[i] = Math.round(Math.min(255, pixels.data[i] * 1.2));
+            break;
+         case 0: case 2:
+            pixels.data[i] = Math.floor(pixels.data[i] / 2);
+            break;
+         case 3:break;
+      }
+   }
+
+   return pixels;
+}
+
+Filters.boostblue = function(pixels) {
+   for(var i = 0, j = pixels.data.length; i < j; i ++) {
+      switch(i % 4) {
+         case 2:
+            pixels.data[i] = Math.round(Math.min(255, pixels.data[i] * 1.2));
+            break;
+         case 0: case 1:
+            pixels.data[i] = Math.floor(pixels.data[i] / 2);
+            break;
+         case 3:break;
+      }
+   }
+
+   return pixels;
+}
+
+//http://d.n-at.me/demo/html5/filter.js

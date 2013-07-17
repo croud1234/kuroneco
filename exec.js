@@ -67,5 +67,11 @@ $(document).ready(function(){
               return id;
               }
        ); 
+
+		runFilter('reverse', Filters.reverse);
+		runFilter('boostred', Filters.boostred);
+		runFilter('boostgreen', Filters.boostgreen);
+		runFilter('boostblue', Filters.boostblue);
+
 	}
 });
