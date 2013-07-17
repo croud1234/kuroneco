@@ -163,3 +163,4 @@ Filters.convoluteFloat32 = function(pixels, weights, opaque) {
 }; 
 
 
+ 

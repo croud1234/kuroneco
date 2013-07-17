@@ -45,7 +45,6 @@ $(document).ready(function(){
                                                 1/9, 1/9, 1/9, 
                                                 1/9, 1/9, 1/9] );
  
-
         runFilter('sobel', function(px) {
               px = Filters.grayscale(px);
               var vertical = Filters.convoluteFloat32(px,
@@ -66,8 +65,7 @@ $(document).ready(function(){
               id.data[i+3] = 255;
               }
               return id;
-              }); 
-
-
+              }
+       ); 
 	}
 });
