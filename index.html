@@ -52,11 +52,31 @@
 
 			<div class="row-fluid">
 				<figure>
+                    <div id="info">original</div>
 					<span id="img"></span>
-					<canvas id="grayscale" width="600" height="337" style="display: none; "></canvas>
-					<canvas id="brightness" width="600" height="337" style="display: none; "></canvas>
-					<canvas id="threshold" width="600" height="337" style="display: none; "></canvas>
-					<button onclick="grayscale()">Grayscale the image</button>
+                    <div id="info">grayscale</div>
+					<canvas id="grayscale" style="display: none; "></canvas>
+                    <div id="info">brightness</div>
+					<canvas id="brightness" style="display: none; "></canvas>
+                    <div id="info">threshold</div>
+					<canvas id="threshold" style="display: none; "></canvas>
+                    <div id="info">sharpen</div>
+					<canvas id="sharpen" style="display: none; "></canvas>
+                    <div id="info">blur</div>
+					<canvas id="blur" style="display: none; "></canvas>
+                    <div id="info">sobel</div>
+					<canvas id="sobel" style="display: none; "></canvas>
+                    <div id="info">reverse</div>
+					<canvas id="reverse" style="display: none; "></canvas>
+                    <div id="info">boostred</div>
+					<canvas id="boostred" style="display: none; "></canvas>
+                    <div id="info">boostgreen</div>
+					<canvas id="boostgreen" style="display: none; "></canvas>
+                    <div id="info">boostblue</div>
+					<canvas id="boostblue" style="display: none; "></canvas>
+
+					<button onclick="execute()">Filtering the image</button>
+
 				</figure>
 			</div>
 		</div>
