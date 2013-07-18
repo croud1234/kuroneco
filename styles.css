@@ -95,3 +95,7 @@ pre
 {
 	background: #c00 none 0 0 no-repeat;
 }
+
+canvas{
+   max-width : 100%;
+}

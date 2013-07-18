@@ -2,6 +2,8 @@ $(document).ready(function(){
 	execute = function() {
 		//元の画像が読み込まれたら、その下に画像を表示する
 		var img = document.getElementById('orig');
+        console.log(img.naturalWidth);
+        console.log(img.naturalHeight);
 		//origの画像にイベントを追加
 		//canvasというタグをすべて取得
 		var canvases = document.getElementsByTagName('canvas');
