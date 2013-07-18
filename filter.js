@@ -9,7 +9,7 @@ Filters.getPixels = function(img) {
 		try { ctx = c.getContext('2d'); } catch(e) {}
 	}
 	if (!ctx) {
-		c = this.getCanvas(img.width, img.height);
+		c = this.getCanvas(img.naturalWidth, img.naturalHeight);
 		ctx = c.getContext('2d');
 		ctx.drawImage(img, 0, 0);
 	}
