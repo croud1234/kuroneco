@@ -114,9 +114,9 @@ $(document).ready(function(){
 
 		runFilter('reverse', Filters.reverse);
 		runFilter('boostred', Filters.boostred);
-		runFilter('boostgreen', Filters.boostgreen);
-		runFilter('boostblue', Filters.boostblue);
-		runFilter('boostall', Filters.boostall);
+//		runFilter('boostgreen', Filters.boostgreen);
+//		runFilter('boostblue', Filters.boostblue);
+//		runFilter('boostall', Filters.boostall);
 		runNecoFilter('kuroneco', Filters.kuroneco);
 
 		var delaySpeed = 100;
