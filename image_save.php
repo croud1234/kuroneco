@@ -19,18 +19,9 @@ if (isset($GLOBALS["HTTP_RAW_POST_DATA"]))
 	fwrite( $fp, $unencodedData);
 	fclose( $fp );
 
-	require_once("./src/facebook.php");
+	$result = array("url" => 'http://croud.chu.jp/h/github/tmp/test.png');
+	echo json_encode($result);
 
-	$config = array();
-	$config['appId'] = '279998682139776';
-	$config['secret'] = '09ff40fabf0e8f9d05b4e01a22b8a927';
-	$config['fileUpload'] = true;
-
-	$facebook = new Facebook($config);
-
-	$user_id = $facebook->getUser();
-
-	system("echo $user_id >> ./tmp/log");
-
+	/* 画像名はランダムで、一日経過したら消すような仕組みを入れる */
 }
 ?>

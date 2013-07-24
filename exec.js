@@ -7,6 +7,12 @@ $(document).ready(function(){
 		var canvases = document.getElementsByTagName('canvas');
 		for (var i=0; i<canvases.length; i++) {
 			var c = canvases[i];
+			
+			//各キャンバスにボタンを押した時に実行して欲しい関数を設定する
+			c.onmousedown = (function() {
+				//ここのthisはクリックしたcanvasの事です
+				file_upload_ajax(this);
+			});
 			//cの親要素(figureタグ)に戻ってimg要素を複製してcの要素の前に追加します
 			c.parentNode.insertBefore(img.cloneNode(true), c);
 			c.style.display = 'none';

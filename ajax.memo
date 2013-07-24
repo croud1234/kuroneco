@@ -1,9 +1,0 @@
-# firebugのエラーコンソールに貼るコード
-var canvases = document.getElementsByTagName('canvas');
-var c = canvases[0];
-
-var canvasData = c.toDataURL();
-var ajax = new XMLHttpRequest();
-ajax.open("POST",'testSave.php',false);
-ajax.setRequestHeader('Content-Type', 'application/upload');
-ajax.send(canvasData );
