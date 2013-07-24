@@ -5,6 +5,12 @@
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" media="all" href="styles.css" />
 		<script src="js/bootstrap.js"></script>
+		<!--	
+		<link rel="stylesheet/less" type="text/css" href="fbootstrapp//lib/bootstrap.less">
+		<script src="fbootstrapp//less.js" type="text/javascript"></script>
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="fbootstrapp//bootstrap.css">
+		-->
 	</head>
 	<body>
 
@@ -23,17 +29,12 @@
 							<li><a href="#about">About</a></li>
 							<li><a href="#contact">Contact</a></li>
 						</ul>
-						<ul class="nab pull-right">
-							<fb:login-button autologoutlink="true" perms="user_likes" data-max-rows="1" data-width="200"></fb:login-button>
-						</ul>
-					</div><!--/.nav-collapse -->
-				</div>
+					</div>
 			</div>
 		</div>
 
 		<div class="container">
 			<form id="upload" action="index.html" method="POST" enctype="multipart/form-data">
-
 				<fieldset>
 					<legend>HTML File Upload</legend>
 
@@ -58,7 +59,9 @@
                     <div id="info">original</div>
 					<span id="img"></span>
                     <div id="info">grayscale</div>
+					<form action="" method="post" name="grayscale">
 					<canvas id="grayscale" style="display: none; "></canvas>
+					</form>
                     <div id="info">brightness</div>
 					<canvas id="brightness" style="display: none; "></canvas>
                     <div id="info">threshold</div>
@@ -87,6 +90,5 @@
 	<script type="text/javascript" src="filter.js"></script>
 	<script type="text/javascript" src="exec.js"></script>
 	<script type="text/javascript" src="filedrag.js"></script>
-	<script type="text/javascript" src="fb.js"></script>
 </body>
 </html>
