@@ -12,17 +12,19 @@ $(document).ready(function(){
 			//console.log(result);
 
 			//ここからfacebookに投稿を行う
-
-			FB.api('/me/photos', 'post', {
-				message: 'photo description',
-				url: result['url']
-			}, function (response) {
-				if (!response || response.error) {
-					alert('Error occured:' + response);
-				} else {
-					alert("facebookにアップロードしました");
-				}
-			});
+			if( !confirm("facebookにアップロードしますか？") ){	
+				FB.api('/me/photos', 'post', {
+					message: 'photo description',
+					url: result['url']
+				}, function (response) {
+					if (!response || response.error) {
+						alert('Error occured:' + response);
+					}
+					else {
+						alert("facebookにアップロードしました");
+					}
+				});
+			}
 		}); //done 
 	}
 });
