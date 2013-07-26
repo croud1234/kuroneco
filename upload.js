@@ -12,7 +12,8 @@ $(document).ready(function(){
 			//console.log(result);
 
 			//ここからfacebookに投稿を行う
-			if( !confirm("facebookにアップロードしますか？") ){	
+			var flag = window.confirm("facebookにアップロードしますか？");
+			if( flag == true ){	
 				FB.api('/me/photos', 'post', {
 					message: 'photo description',
 					url: result['url']
