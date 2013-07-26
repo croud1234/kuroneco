@@ -96,6 +96,11 @@ pre
 	background: #c00 none 0 0 no-repeat;
 }
 
+/* cavvasの大きさ */
 canvas{
-   max-width : 100%;
+   max-width : 30%;
+}
+/* 画像アップ後の大きさ */
+.thumb{
+   max-width : 30%;
 }
