@@ -1,13 +1,25 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" media="all" href="styles.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 		<script src="js/bootstrap.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
 	</head>
 	<body>
-
+		<div id="jquery-ui-dialog" title="投稿しますか？" style='display:none'>
+				<form>
+					<fieldset>
+						<p>facebookに画像を投稿します。<br>詳細を入力してOKボタンを押してください。</p>
+						<label for="jquery-ui-dialog-form-memo"></label>
+						<input type="text" name="jquery-ui-dialog-form-memo" id="jquery-ui-dialog-form-memo" class="text ui-widget-content ui-corner-all" />
+						</p>
+					</fieldset>
+				</form>
+			</div>
+		<span id='jquery-ui-dialog-opener'></span>
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
