@@ -98,9 +98,30 @@ pre
 
 /* cavvasの大きさ */
 canvas{
+    /* max-width : 30%; */
+   	width: 250px;
+    height: 250px;
+	background-size: cover;
+
+}
+
+ul{list-style:none;}
+
+li.square{
+	float:left;
+	display:block;
+	margin-right:20px;
    max-width : 30%;
 }
+
 /* 画像アップ後の大きさ */
 .thumb{
    max-width : 30%;
 }
+
+#button{
+	margin:50px;
+}
+
+.clear { clear:both; }  
+.clear hr { display:none; }  
