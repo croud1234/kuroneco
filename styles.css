@@ -29,6 +29,7 @@ legend
 	color: #333;
 }
 
+/*
 #filedrag
 {
 	display: none;
@@ -48,6 +49,39 @@ legend
 	border-color: #f00;
 	border-style: solid;
 	box-shadow: inset 0 3px 4px #888;
+}
+*/
+
+#filedrag
+{
+	display: none;
+	text-align: center;
+	padding: 1em 0;
+	margin: 1em 0;
+	color: #555;
+	border: 2px dashed #555;
+	border-radius: 7px;
+	cursor: default;
+    background-image:url("./img/neco_anime.gif");
+    height : 278px;
+    width : 100%; 
+    background-repeat:no-repeat;
+    background-position: center;
+
+ }
+
+#filedrag.hover
+{
+	color: #f00;
+	border-color: #f00;
+	border-style: solid;
+	box-shadow: inset 0 3px 4px #888;
+
+    background-image:url("./img/neco_open.png");
+    height : 278px;
+    width : 100%; 
+    background-repeat:no-repeat;
+    background-position: center;
 }
 
 img
