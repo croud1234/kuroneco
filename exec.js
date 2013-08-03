@@ -64,7 +64,10 @@ $(document).ready(function(){
 
                 var necoImg = new Image();
                 necoImg.src = "./img/neco_.png"; 
-                necoImg.addEventListener('load', eventNecoImgLoaded(ctx, necoImg), false);
+                necoImg.onload = function(){
+                  eventNecoImgLoaded(ctx, necoImg);
+                }
+                //necoImg.addEventListener('load', eventNecoImgLoaded(ctx, necoImg), false);
 
 			}
 		}
