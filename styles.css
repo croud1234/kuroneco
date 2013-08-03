@@ -128,4 +128,9 @@ li.square{
 .clear { clear:both; }  
 .clear hr { display:none; }  
 
+.canvas_click {
+   margin : -3px;
+   border : solid 3px red;
+}
+
 

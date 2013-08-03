@@ -127,5 +127,11 @@ $(document).ready(function(){
 			}
 		});
 
-	}
+        $('ul li > canvas').click(function() {
+              $('ul li >  canvas').each(function() {
+                 $(this).removeClass('canvas_click');
+                 });           
+              $(this).addClass('canvas_click'); 
+              });
+    }
 });
