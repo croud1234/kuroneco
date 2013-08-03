@@ -116,6 +116,7 @@ $(document).ready(function(){
 		runFilter('boostred', Filters.boostred);
 		runFilter('boostgreen', Filters.boostgreen);
 		runFilter('boostblue', Filters.boostblue);
+		runFilter('boostall', Filters.boostall);
 		runNecoFilter('kuroneco', Filters.kuroneco);
 
 		var delaySpeed = 100;

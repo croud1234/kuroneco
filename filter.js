@@ -224,6 +224,29 @@ Filters.boostblue = function(pixels) {
    return pixels;
 }
 
+Filters.boostall = function(pixels) {
+   for(var i = 0, j = pixels.data.length; i < j; i ++) {
+      switch(i % 4) {
+         case 0:
+            //red
+            //各値の範囲は恐らく0-255
+            pixels.data[i] = Math.floor(pixels.data[i] / 2);
+            break;
+         case 1:
+            //green
+            pixels.data[i] = Math.floor(pixels.data[i] / 2);
+            break;
+         case 2:
+            //blue
+            pixels.data[i] = Math.round(Math.min(255, pixels.data[i] * 1.2));
+            break;
+         case 3:break;
+      }
+   }
+
+   return pixels;
+}
+
 //http://d.n-at.me/demo/html5/filter.js
 
 Filters.kuroneco = function(pixels) {
