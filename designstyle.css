@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+margin: 0;
+padding: 0;
+}
+
+body{
+	background-color:#027B02;
+}
+
+#wrap{
+	width: 100%;
+	height: 100%;
+	background-image:url(img/background.png);
+	background-repeat:repeat-x;
+	background-positon: 0 -200px;
+	text-align:center;
+}
+
+#main{
+	width: 800px;
+	margin: 0 auto;
+}
+
+#drop{
+	width: 600px;
+	height: 1000px;
+	background-image: url(img/hukidashi.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+	margin: 0 auto;
+	position: relative;
+}
+
+h1{
+	background-image:url(img/logo.png);
+	display: none;
+}
+
+#filedrag
+{
+	display: none;
+	text-align: center;
+	padding: 1em 0;
+	margin: 1em 0;
+	color: #555;
+	border: 2px dashed #555;
+	border-radius: 7px;
+	cursor: default;
+    background-image:url("/img/neco_anime.gif");
+    height : 278px;
+    width : 100%; 
+    background-repeat:no-repeat;
+    background-position: center;
+	position: absolute;
+    bottom: 0;
+
+ }
+
+#filedrag.hover
+{
+	color: #f00;
+	border-color: #f00;
+	border-style: solid;
+	box-shadow: inset 0 3px 4px #888;
+
+    background-image:url("/img/neco_open.png");
+    height : 278px;
+    width : 100%; 
+    background-repeat:no-repeat;
+    background-position: center;
+}
