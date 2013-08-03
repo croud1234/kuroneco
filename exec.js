@@ -67,7 +67,6 @@ $(document).ready(function(){
                 necoImg.onload = function(){
                   eventNecoImgLoaded(ctx, necoImg);
                 }
-                //necoImg.addEventListener('load', eventNecoImgLoaded(ctx, necoImg), false);
 
 			}
 		}
@@ -118,6 +117,14 @@ $(document).ready(function(){
 		runFilter('boostgreen', Filters.boostgreen);
 		runFilter('boostblue', Filters.boostblue);
 		runNecoFilter('kuroneco', Filters.kuroneco);
+
+		var delaySpeed = 100;
+		var fadeSpeed = 1000;
+		$('ul li canvas').each(function(i){
+			if( $(this).css('display') == 'inline' ){
+            	$(this).delay(i*(delaySpeed)).css({display:'block',opacity:'0'}).animate({opacity:'1'},fadeSpeed);
+			}
+		});
 
 	}
 });
