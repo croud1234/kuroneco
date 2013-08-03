@@ -6195,6 +6195,7 @@ body
 	font-family: "Segoe UI", Tahoma, Helvetica, freesans, sans-serif;
 	font-size: 90%;
 	background-color:#027B02;
+	background-image:url(img/background_grass.png);
 
 }
 
@@ -6237,6 +6238,13 @@ legend
 	position: relative;
 }
 
+#draganddrop{
+	width: 150px;
+	height: 208px;
+	position:relative;
+	background-image:url(img/draganddrop.png);
+	margin-top: 0px;
+}
 
 h1{
 	background-image:url(img/logo.png);
@@ -7605,6 +7613,7 @@ body .ui-tooltip {
 		</div> 
 <div id="drop">
 		<div class="container">
+        <div id="draganddrop"></div>
 			<form id="upload" action="index.html" method="POST" enctype="multipart/form-data">
 
 				<fieldset>
@@ -7619,7 +7628,8 @@ body .ui-tooltip {
 						<label for="fileselect">Files to upload:</label>
 -->
 						<input type="file" id="fileselect" name="fileselect[]" multiple />
-						<div id="filedrag" class=""></div>
+						<div id="filedrag"></div>
+                       
 					</div>
 					<div id="submitbutton">
 						<button type="submit">Upload Files</button>
