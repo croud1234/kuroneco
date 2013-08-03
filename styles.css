@@ -127,3 +127,36 @@ li.square{
 
 .clear { clear:both; }  
 .clear hr { display:none; }  
+
+/*
+      width: 550px;
+
+ul {
+      text-align: left;
+      margin: 0 auto;
+}
+
+
+ul li {
+      margin: 5px;
+      width: 100px;
+      text-align: left;
+      float: left;
+      display: none;
+      overflow: hidden;
+}
+
+ul:after {
+      content: ".";
+      height: 0;
+      clear: both;
+      display: block;
+      visibility: hidden;
+}
+
+ul {
+      display: inline-block;
+      overflow: hidden;
+}
+
+*/

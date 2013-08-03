@@ -67,7 +67,6 @@ $(document).ready(function(){
                 necoImg.onload = function(){
                   eventNecoImgLoaded(ctx, necoImg);
                 }
-                //necoImg.addEventListener('load', eventNecoImgLoaded(ctx, necoImg), false);
 
 			}
 		}
