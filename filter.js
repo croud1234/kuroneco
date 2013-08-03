@@ -225,3 +225,22 @@ Filters.boostblue = function(pixels) {
 }
 
 //http://d.n-at.me/demo/html5/filter.js
+
+Filters.kuroneco = function(pixels) {
+//   for(var i = 0, j = pixels.data.length; i < j; i ++) {
+//     switch(i % 4) {
+//         case 2:
+//            pixels.data[i] = Math.round(Math.min(255, pixels.data[i] * 1.2));
+//            break;
+//      case 0: case 1:
+//          pixels.data[i] = Math.floor(pixels.data[i] / 2);
+//          break;
+//       case 3:break;
+//    }
+// }
+
+   return pixels;
+}
+
+
+

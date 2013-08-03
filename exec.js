@@ -41,6 +41,42 @@ $(document).ready(function(){
 			}
 		}
 
+		// フィルターを実行する
+		function runNecoFilter(id, filter, arg1, arg2, arg3) {
+			var c = document.getElementById(id); //canvasの要素を取得する
+			var s = c.previousSibling.style; //canvasの前にあるimgを表示するかしないか1
+
+			//canvasの前の要素のdisplay属性がnone、表示しないであれば、inlineにして表示します。
+			//canvasの結果はnoneで隠す
+			//ボタンのテキストをoriginalにする
+			if (s.display == 'none') {
+				s.display = 'inline';
+				c.style.display = 'none';
+			} else {
+				//idataにフィルタリングした画像の要素が入る
+				var idata = Filters.filterImage(filter, img, arg1, arg2, arg3);
+				c.width = idata.width;
+				c.height = idata.height;
+				var ctx = c.getContext('2d');
+				ctx.putImageData(idata, 0, 0); //画像を置く
+				s.display = 'none';
+				c.style.display = 'inline';
+
+                var necoImg = new Image();
+                necoImg.src = "./img/neco_.png"; 
+                necoImg.addEventListener('load', eventNecoImgLoaded(ctx, necoImg), false);
+
+			}
+		}
+
+        function eventNecoImgLoaded(ctx, necoImg) {
+           drawScreen(ctx, necoImg);
+        }
+
+        function drawScreen(ctx, necoImg) {
+           ctx.drawImage(necoImg, 0, 0);
+        }
+
 		runFilter('grayscale', Filters.grayscale);
 		runFilter('brightness', Filters.brightness, 40);
 		runFilter('threshold', Filters.threshold, 128);
@@ -78,6 +114,7 @@ $(document).ready(function(){
 		runFilter('boostred', Filters.boostred);
 		runFilter('boostgreen', Filters.boostgreen);
 		runFilter('boostblue', Filters.boostblue);
+		runNecoFilter('kuroneco', Filters.kuroneco);
 
 	}
 });
