@@ -11,6 +11,33 @@
 	</head>
 	<body>
     <div id="wrap">
+     <div id="topbar">
+               <h1>kuroneco</a></h1>
+						<ul class="nav pull-right">
+							<li><fb:login-button autologoutlink="true" perms="user_likes" data-max-rows="1" data-width="200"></fb:login-button></li>
+						</ul>
+  <div id="tophiddenbar">
+  <div id="about">
+  <h2>Mogunecoって？</h2>
+  お手軽簡単にパソコン上の写真を加工してフェイスブックに投稿できるサービスです。もぐもぐ。</br>
+  まずはドラッグ＆ドロップでモグネコに写真を与えてください。もぐもぐ。
+  </div>
+  <div id="aboutus">
+  	<h2>About us</h2>
+  	<ul>
+    <li>プログラマー：くすとしあき</li>
+    <li>プログラマー：しーも</li>
+    <li>リーダー：あたに</li>
+    <li>デザイナー：ゆみこふ</li>    
+    <li>補佐：りーぬ</li>
+    </ul>
+  </div>
+  <div id="other">
+  	このサービスは<a href="http://osan-camp.jugem.jp/" target="_blank">お産合宿７</a>で誕生しました。</br>
+    🚀 paperboy&co.
+  </div>  
+</div>   
+</div> 
     <div id="main">
 		<div id="jquery-ui-dialog" title="投稿しますか？" style='display:none'>
 				<form>
@@ -21,10 +48,12 @@
 						</p>
 					</fieldset>
 				</form>
-			</div>
+	  </div>
 		<span id='jquery-ui-dialog-opener'></span>
+        
+
 		
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <!--<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
 					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -46,7 +75,8 @@
             
 				</div>  
 			</div>
-		</div> 
+		</div> -->
+        
 <div id="drop">
 		<div class="container">
         <div id="draganddrop"></div>
@@ -78,42 +108,38 @@
 			<div class="row-fluid">
 				<figure>
                 <ul>
-                    <li><div id="info">original</div></li>
-					<li><span id="img"></span></li>
-                  <li class="square"><div id="info">grayscale</div>
+                   <li class="square"><span id="img"></span></li>
+                  <li class="square">
                   <canvas id="grayscale" style="display: none; "></canvas>
                   </li>
-                  <li class="square"><div id="info">brightness</div>
+                  <li class="square">
 				  <canvas id="brightness" style="display: none; "></canvas>
 				  </li>
-                  <li class="square"><div id="info">threshold</div>
+                  <li class="square">
                   <canvas id="threshold" style="display: none; "></canvas>
                   </li>
-                  <li class="square"><div id="info">sharpen</div>
+                  <li class="square">
                   <canvas id="sharpen" style="display: none; "></canvas>
                   </li>
-                  <li class="square"><div id="info">blur</div>
+                  <li class="square">
                   <canvas id="blur" style="display: none; "></canvas>
                   </li>
-                  <li class="square"><div id="info" class="square">sobel</div>
+                  <li class="square">
                   <canvas id="sobel" style="display: none; "></canvas>
                   </li>
-                  <li class="square"><div id="info">reverse</div>
+                  <li class="square">
                   <canvas id="reverse" style="display: none; "></canvas>
                   </li>
-                  <li class="square"><div id="info" class="square">boostred</div>
-                  <canvas id="boostred" style="display: none; "></canvas>
-                  </li>
-                  <li class="square"><div id="info">boostgreen</div>
+                  <li class="square">
                   <canvas id="boostgreen" style="display: none; "></canvas>
                   </li>
-                  <li class="square"><div id="info">boostblue</div>
+                  <li class="square">
                   <canvas id="boostblue" style="display: none; "></canvas>
                   </li>
-                  <li class="square"><div id="info">boostall</div>
+                  <li class="square">
                   <canvas id="boostall" style="display: none; "></canvas>
                   </li>
-                  <li class="square"><div id="info">necofilter</div>
+                  <li class="square">
                   <canvas id="kuroneco" style="display: none; "></canvas>
                   </li>
                 </ul>
@@ -122,7 +148,7 @@
          
 			</div>
             <div id="button" class="clear"><button onClick="execute()">Filtering the image</button></div>
-		</div>
+	  </div>
 	</div>
     </div>
     </div>

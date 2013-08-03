@@ -46,7 +46,7 @@ legend
 
 #main{
 	width: 800px;
-	margin: 0 auto;
+	margin: 0 auto;im
 }
 
 #drop{
@@ -183,13 +183,13 @@ ul{list-style:none;}
 li.square{
 	float:left;
 	display:block;
-	margin-right:20px;
+	margin:10px;
    max-width : 30%;
 }
 
 /* 画像アップ後の大きさ */
 .thumb{
-   max-width : 30%;
+   max-width : 100%;
 }
 
 #button{
@@ -205,3 +205,58 @@ li.square{
 }
 
 
+/* Header */
+
+#topbar {
+  background: #4f4a41;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  height: 36px;
+  overflow: hidden;
+  -webkit-transition: height 0.5s linear;
+  -moz-transition: height 0.5s linear;
+  transition: height 0.5s linear;
+  z-index: 10px;
+  positon: relative;
+}
+#topbar a {
+  color: #fff;
+  font-size:1.3em;
+  line-height: 1.25em;
+  text-decoration: none;
+  opacity: 0.5;
+  font-weight: bold;
+}
+#topbar a:hover {
+  opacity: 1;
+}
+  
+#tophiddenbar {
+  display: block;
+  width: 100%;
+  background: #4f4a41;
+  color: #b09f82;
+  font-weight: bold;
+  padding: 8px 0; 
+  font-size: 1.3em;
+  text-align: center;
+  text-shadow: 1px 1px 0 #444;
+  z-index: 5px;
+  positon: relative;
+}
+#tophiddenbar a {
+  color: #fff;
+  font-size: 1.0em;
+  text-decoration: none;
+  opacity: 0.5;
+  text-shadow: none;
+}
+#tophiddenbar a:hover { opacity: 1; }
+  
+#topbar:hover { height: 300px; }
+
+.nav {
+  margin-bottom: 20px;
+  margin-left: 0;
+  list-style: none;
+}
