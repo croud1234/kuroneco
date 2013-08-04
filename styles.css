@@ -42,6 +42,7 @@ legend
 	background-image:url(img/background.png);
 	background-repeat:repeat-x;
 	text-align:center;
+	z-index: -100;
 }
 
 #main{
@@ -53,17 +54,16 @@ legend
 	width: 800px;
 	background-image: url(img/hukidashi.png);
 	background-repeat: no-repeat;
-	background-position: right 30px;
+	background-position: right 150px;
 	margin: 0px auto;
-	position: relative;
 }
 
 #draganddrop{
-	width: 150px;
-	height: 208px;
-	position:relative;
 	background-image:url(img/draganddrop.png);
-	margin-top: 0px;
+    background-repeat: no-repeat;
+    height: 208px;
+    margin-left: 30px;
+    margin-top: 105px;
 }
 
 h1{
@@ -82,13 +82,13 @@ h1{
 	background-position:center;
     height : 278px;
     background-repeat:no-repeat;
-	margin: 150px 240px 0px 0px;
+	margin: 10px 240px 0px 0px;
  }
 
 #filedrag.hover
 {
     background-image:url(img/neco_open.png);
-    height : 278px; 
+    height : 350px; 
     background-repeat:no-repeat;
     background-position: center;
 }
@@ -259,4 +259,13 @@ li.square{
   margin-bottom: 20px;
   margin-left: 0;
   list-style: none;
+}
+
+
+select, input[type="file"] {
+	height: 30px;
+	line-height: 30px;
+	position: absolute;
+	left: 100px;
+	top: 600px;
 }
