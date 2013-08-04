@@ -18,3 +18,4 @@ window.fbAsyncInit = function() {
 	js.src = "//connect.facebook.net/ja_JP/all.js";
 	fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
