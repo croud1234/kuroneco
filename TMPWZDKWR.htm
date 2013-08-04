@@ -6226,7 +6226,7 @@ legend
 
 #main{
 	width: 800px;
-	margin: 0 auto;
+	margin: 0 auto;im
 }
 
 #drop{
@@ -6245,12 +6245,6 @@ legend
 	background-image:url(img/draganddrop.png);
 	margin-top: 0px;
 }
-
-h1{
-	background-image:url(img/logo.png);
-	display: none;
-}
-
 
 #filedrag
 {
@@ -6363,13 +6357,13 @@ ul{list-style:none;}
 li.square{
 	float:left;
 	display:block;
-	margin-right:20px;
+	margin:10px;
    max-width : 30%;
 }
 
 /* 画像アップ後の大きさ */
 .thumb{
-   max-width : 30%;
+   max-width : 100%;
 }
 
 #button{
@@ -6385,6 +6379,78 @@ li.square{
 }
 
 
+/* Header */
+
+#topbar {
+  background: #4f4a41;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  height: 36px;
+  overflow: hidden;
+  -webkit-transition: height 0.5s linear;
+  -moz-transition: height 0.5s linear;
+  transition: height 0.5s linear;
+  z-index: 1;
+  positon: relative;
+}
+#topbar a {
+  color: #fff;
+  font-size:1.3em;
+  line-height: 1.25em;
+  text-decoration: none;
+  opacity: 0.5;
+  font-weight: bold;
+}
+#topbar a:hover {
+  opacity: 1;
+}
+  
+#tophiddenbar {
+  display: block;
+  width: 100%;
+  background: #4f4a41;
+  color: #b09f82;
+  font-weight: bold;
+  padding: 8px 0; 
+  font-size: 1.3em;
+  text-align: center;
+  text-shadow: 1px 1px 0 #444;
+  z-index: 5;
+  positon: absolute;
+}
+#tophiddenbar a {
+  color: #fff;
+  font-size: 1.0em;
+  text-decoration: none;
+  opacity: 0.5;
+  text-shadow: none;
+}
+#tophiddenbar a:hover { opacity: 1; }
+  
+#topbar:hover { height: 300px; }
+
+.nav {
+  margin-bottom: 20px;
+  margin-left: 0;
+  list-style: none;
+}
+
+#about{
+}
+
+#aboutus{
+	float:left;
+	width: 400px;
+}
+
+#aboutus li{
+	display:none;
+}
+
+#other{
+	float:left;
+	width: 600px;
+}
 
 
 </style>
@@ -7575,6 +7641,33 @@ body .ui-tooltip {
 	</head>
 	<body>
     <div id="wrap">
+     <div id="topbar">
+               <h1>kuroneco</h1>
+						<ul class="nav pull-right">
+							<li><fb:login-button autologoutlink="true" perms="user_likes" data-max-rows="1" data-width="200"></fb:login-button></li>
+						</ul>
+  <div id="tophiddenbar">
+  <div id="about">
+  <h2>Mogunecoって？</h2>
+  お手軽簡単にパソコン上の写真を加工してフェイスブックに投稿できるサービスです。もぐもぐ。</br>
+  まずはドラッグ＆ドロップでモグネコに写真を与えてください。もぐもぐ。
+  </div>
+  <div id="aboutus">
+  	<h2>About us</h2>
+  	<ul>
+    <li>プログラマー：くすとしあき</li>
+    <li>プログラマー：しーも</li>
+    <li>リーダー：あたに</li>
+    <li>デザイナー：ゆみこふ</li>    
+    <li>補佐：りーぬ</li>
+    </ul>
+  </div>
+  <div id="other">
+  	このサービスは<a href="http://osan-camp.jugem.jp/" target="_blank">お産合宿７</a>で誕生しました。</br>
+    🚀 paperboy&co.
+  </div>  
+</div>   
+</div> 
     <div id="main">
 		<div id="jquery-ui-dialog" title="投稿しますか？" style='display:none'>
 				<form>
@@ -7585,10 +7678,12 @@ body .ui-tooltip {
 						</p>
 					</fieldset>
 				</form>
-			</div>
+	  </div>
 		<span id='jquery-ui-dialog-opener'></span>
+        
+
 		
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <!--<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
 					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -7610,7 +7705,8 @@ body .ui-tooltip {
             
 				</div>  
 			</div>
-		</div> 
+		</div> -->
+        
 <div id="drop">
 		<div class="container">
         <div id="draganddrop"></div>
@@ -7627,57 +7723,53 @@ body .ui-tooltip {
 <!--
 						<label for="fileselect">Files to upload:</label>
 -->
-						<input type="file" id="fileselect" name="fileselect[]" multiple />
+						<input type="image" src="img/food.png"  id="fileselect" name="fileselect[]" multiple />
 						<div id="filedrag"></div>
                        
 					</div>
 					<div id="submitbutton">
-						<button type="submit">Upload Files</button>
+						<button>Upload Files</button>
 					</div>
 				</fieldset>
 			</form>
  </div>
-            
+       <div id="button" class="clear"><button onClick="execute()">Filtering the image</button></div>     
 
 			<div class="row-fluid">
 				<figure>
                 <ul>
-                    <li><div id="info">original</div></li>
-					<li><span id="img"></span></li>
-                  <li class="square"><div id="info">grayscale</div>
+                   <li class="square"><span id="img"></span></li>
+                  <li class="square">
                   <canvas id="grayscale" style="display: none; "></canvas>
                   </li>
-                  <li class="square"><div id="info">brightness</div>
+                  <li class="square">
 				  <canvas id="brightness" style="display: none; "></canvas>
 				  </li>
-                  <li class="square"><div id="info">threshold</div>
+                  <li class="square">
                   <canvas id="threshold" style="display: none; "></canvas>
                   </li>
-                  <li class="square"><div id="info">sharpen</div>
+                  <li class="square">
                   <canvas id="sharpen" style="display: none; "></canvas>
                   </li>
-                  <li class="square"><div id="info">blur</div>
+                  <li class="square">
                   <canvas id="blur" style="display: none; "></canvas>
                   </li>
-                  <li class="square"><div id="info" class="square">sobel</div>
+                  <li class="square">
                   <canvas id="sobel" style="display: none; "></canvas>
                   </li>
-                  <li class="square"><div id="info">reverse</div>
+                  <li class="square">
                   <canvas id="reverse" style="display: none; "></canvas>
                   </li>
-                  <li class="square"><div id="info" class="square">boostred</div>
-                  <canvas id="boostred" style="display: none; "></canvas>
-                  </li>
-                  <li class="square"><div id="info">boostgreen</div>
+                  <li class="square">
                   <canvas id="boostgreen" style="display: none; "></canvas>
                   </li>
-                  <li class="square"><div id="info">boostblue</div>
+                  <li class="square">
                   <canvas id="boostblue" style="display: none; "></canvas>
                   </li>
-                  <li class="square"><div id="info">boostall</div>
+                  <li class="square">
                   <canvas id="boostall" style="display: none; "></canvas>
                   </li>
-                  <li class="square"><div id="info">necofilter</div>
+                  <li class="square">
                   <canvas id="kuroneco" style="display: none; "></canvas>
                   </li>
                 </ul>
@@ -7685,9 +7777,14 @@ body .ui-tooltip {
 				</figure>
          
 			</div>
-            <div id="button" class="clear"><button onClick="execute()">Filtering the image</button></div>
-		</div>
+	  </div>
 	</div>
+    </div> 
+    <footer style="text-align:center;">
+    <p>
+          copyright &copy; <a href="http://osan-camp.jugem.jp/?eid=75" target="_blank">KURONECO</a> All rights reserved. 
+        </p>
+      </footer>
     </div>
     </div>
 	<script type="text/javascript" src="upload.js"></script>

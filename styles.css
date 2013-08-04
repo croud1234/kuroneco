@@ -66,12 +66,6 @@ legend
 	margin-top: 0px;
 }
 
-h1{
-	background-image:url(./img/logo.png);
-	display: none;
-}
-
-
 #filedrag
 {
 	display: none;
@@ -216,7 +210,7 @@ li.square{
   -webkit-transition: height 0.5s linear;
   -moz-transition: height 0.5s linear;
   transition: height 0.5s linear;
-  z-index: 10px;
+  z-index: 1;
   positon: relative;
 }
 #topbar a {
@@ -241,8 +235,8 @@ li.square{
   font-size: 1.3em;
   text-align: center;
   text-shadow: 1px 1px 0 #444;
-  z-index: 5px;
-  positon: relative;
+  z-index: 5;
+  positon: absolute;
 }
 #tophiddenbar a {
   color: #fff;
@@ -259,4 +253,21 @@ li.square{
   margin-bottom: 20px;
   margin-left: 0;
   list-style: none;
+}
+
+#about{
+}
+
+#aboutus{
+	float:left;
+	width: 400px;
+}
+
+#aboutus li{
+	display:none;
+}
+
+#other{
+	float:left;
+	width: 600px;
 }
