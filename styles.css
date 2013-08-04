@@ -53,7 +53,7 @@ legend
 	width: 800px;
 	background-image: url(img/hukidashi.png);
 	background-repeat: no-repeat;
-	background-position: right 30px;
+	background-position: right 100px;
 	margin: 0px auto;
 	position: relative;
 }
@@ -61,8 +61,12 @@ legend
 #draganddrop{
 	width: 150px;
 	height: 208px;
+	top: 100px;
 	position:relative;
 	background-image:url(img/draganddrop.png);
+    background-repeat: no-repeat;
+    height: 208px;
+    margin-left: 30px;
 	margin-top: 0px;
 }
 
@@ -82,7 +86,7 @@ h1{
 	background-position:center;
     height : 278px;
     background-repeat:no-repeat;
-	margin: 150px 240px 0px 0px;
+	margin: 10px 240px 0px 0px;
  }
 
 #filedrag.hover
@@ -191,10 +195,18 @@ li.square{
 .thumb{
    max-width : 30%;
 }
-
+/*
 #button{
-	margin:50px;
+	padding:0;
+	margin:0;
+	background:none;
+	border:0;
+	font-size:0;
+	line-height:0;
+	overflow:visible;
+	cursor:pointer;
 }
+	*/
 
 .clear { clear:both; }  
 .clear hr { display:none; }  
@@ -205,3 +217,25 @@ li.square{
 }
 
 
+select, input[type="file"] {
+	height: 200px;
+	width: 200px;
+	line-height: 30px;
+	position: absolute;
+	left: 100px;
+	top: 470px;
+	opacity: 0;
+	-moz-opacity: 0;
+	z-index: 100;
+}
+
+#filedrag_overwrap{
+	background-image:url(img/food.png);
+	background-repeat: no-repeat;
+	height: 200px;
+	width: 200px;
+	line-height: 30px;
+	position: absolute;
+	left: 100px;
+	top: 470px;
+}
