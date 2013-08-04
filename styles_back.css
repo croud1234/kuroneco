@@ -42,32 +42,28 @@ legend
 	background-image:url(img/background.png);
 	background-repeat:repeat-x;
 	text-align:center;
+	z-index: -100;
 }
 
 #main{
 	width: 800px;
-	margin: 0 auto;
+	margin: 0 auto;im
 }
 
 #drop{
 	width: 800px;
 	background-image: url(img/hukidashi.png);
 	background-repeat: no-repeat;
-	background-position: right 100px;
+	background-position: right 150px;
 	margin: 0px auto;
-	position: relative;
 }
 
 #draganddrop{
-	width: 150px;
-	height: 208px;
-	top: 100px;
-	position:relative;
 	background-image:url(img/draganddrop.png);
     background-repeat: no-repeat;
     height: 208px;
     margin-left: 30px;
-	margin-top: 0px;
+    margin-top: 105px;
 }
 
 h1{
@@ -92,7 +88,7 @@ h1{
 #filedrag.hover
 {
     background-image:url(img/neco_open.png);
-    height : 278px; 
+    height : 350px; 
     background-repeat:no-repeat;
     background-position: center;
 }
@@ -187,16 +183,15 @@ ul{list-style:none;}
 li.square{
 	float:left;
 	display:block;
-	margin-right:20px;
-	margin-top:20px;
-	max-width : 30%;
-	
+	margin:10px;
+   max-width : 30%;
 }
 
 /* 画像アップ後の大きさ */
 .thumb{
-   max-width : 30%;
+   max-width : 100%;
 }
+
 #button{
 	margin:50px;
 }
@@ -210,25 +205,67 @@ li.square{
 }
 
 
-select, input[type="file"] {
-	height: 200px;
-	width: 200px;
-	line-height: 30px;
-	position: absolute;
-	left: 100px;
-	top: 470px;
-	opacity: 0;
-	-moz-opacity: 0;
-	z-index: 100;
+/* Header */
+
+#topbar {
+  background: #4f4a41;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  height: 36px;
+  overflow: hidden;
+  -webkit-transition: height 0.5s linear;
+  -moz-transition: height 0.5s linear;
+  transition: height 0.5s linear;
+  z-index: 10px;
+  positon: relative;
+}
+#topbar a {
+  color: #fff;
+  font-size:1.3em;
+  line-height: 1.25em;
+  text-decoration: none;
+  opacity: 0.5;
+  font-weight: bold;
+}
+#topbar a:hover {
+  opacity: 1;
+}
+  
+#tophiddenbar {
+  display: block;
+  width: 100%;
+  background: #4f4a41;
+  color: #b09f82;
+  font-weight: bold;
+  padding: 8px 0; 
+  font-size: 1.3em;
+  text-align: center;
+  text-shadow: 1px 1px 0 #444;
+  z-index: 5px;
+  positon: relative;
+}
+#tophiddenbar a {
+  color: #fff;
+  font-size: 1.0em;
+  text-decoration: none;
+  opacity: 0.5;
+  text-shadow: none;
+}
+#tophiddenbar a:hover { opacity: 1; }
+  
+#topbar:hover { height: 300px; }
+
+.nav {
+  margin-bottom: 20px;
+  margin-left: 0;
+  list-style: none;
 }
 
-#filedrag_overwrap{
-	background-image:url(img/food.png);
-	background-repeat: no-repeat;
-	height: 200px;
-	width: 200px;
+
+select, input[type="file"] {
+	height: 30px;
 	line-height: 30px;
 	position: absolute;
 	left: 100px;
-	top: 470px;
+	top: 600px;
 }
